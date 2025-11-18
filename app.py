@@ -2,6 +2,25 @@ import streamlit as st
 
 # 1. Website ka Title
 st.set_page_config(page_title="store", page_icon="🛒")
+# ... upar st.set_page_config(...) wali line hogi ...
+
+# --- YE CODE PASTE KAREIN ---
+hide_elements = """
+    <style>
+    /* Main Menu (Upar right corner ki 3 lines) hatane ke liye */
+    #MainMenu {visibility: hidden;}
+    
+    /* Footer (Niche "Made with Streamlit") hatane ke liye */
+    footer {visibility: hidden;}
+    
+    /* Header (Jahan aapka naam/photo aata hai) hatane ke liye */
+    header {visibility: hidden;}
+    </style>
+    """
+st.markdown(hide_elements, unsafe_allow_html=True)
+# -----------------------------
+
+# ... baaki ka dukaan wala code niche rahega ...
 st.title("🥦 Instant Store")
 st.write("based on python!")
 
